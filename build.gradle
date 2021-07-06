@@ -27,7 +27,7 @@ ext {
     set('pbVersion', "0.9.1")
     set('discogsJooqVersion', "0.0.3")
     set('liquibaseVersion', "4.4.0")
-    set('readOnlyPackageToken', "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")
+    set('readOnlyPackageToken', "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")
     set('readOnlyPackageUser', "state303")
 }
 
