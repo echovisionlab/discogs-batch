@@ -36,7 +36,6 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @Configuration
 @RequiredArgsConstructor
 public class JobPreparationRunner implements ApplicationRunner {
-
   private final JobParameterResolver jobParameterResolver;
   private final JobParametersConverter jobParametersConverter;
   private final DataSource dataSource;

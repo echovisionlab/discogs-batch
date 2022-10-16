@@ -1,4 +1,4 @@
-package io.dsub.discogs.batch.domain;
+package io.dsub.discogs.batch.xml;
 
 import org.jooq.UpdatableRecord;
 

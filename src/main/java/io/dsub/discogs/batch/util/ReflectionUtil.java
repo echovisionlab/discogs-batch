@@ -11,6 +11,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 
+// TODO: refactor or split into more concrete interfaces
 @Slf4j
 public class ReflectionUtil {
 

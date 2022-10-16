@@ -4,7 +4,7 @@ import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.ARTIST;
 import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.GENRE;
 import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.STYLE;
 
-import io.dsub.discogs.batch.domain.master.MasterSubItemsXML;
+import io.dsub.discogs.batch.xml.master.MasterSubItemsXML;
 import io.dsub.discogs.batch.job.registry.EntityIdRegistry;
 import io.dsub.discogs.batch.util.ReflectionUtil;
 import io.dsub.discogs.jooq.tables.records.MasterGenreRecord;

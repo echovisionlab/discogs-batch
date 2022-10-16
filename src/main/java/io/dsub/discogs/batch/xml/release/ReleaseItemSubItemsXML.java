@@ -1,7 +1,7 @@
-package io.dsub.discogs.batch.domain.release;
+package io.dsub.discogs.batch.xml.release;
 
-import io.dsub.discogs.batch.domain.HashXML;
-import io.dsub.discogs.batch.domain.SubItemXML;
+import io.dsub.discogs.batch.xml.HashXML;
+import io.dsub.discogs.batch.xml.SubItemXML;
 import io.dsub.discogs.jooq.tables.records.LabelReleaseItemRecord;
 import io.dsub.discogs.jooq.tables.records.ReleaseItemArtistRecord;
 import io.dsub.discogs.jooq.tables.records.ReleaseItemCreditedArtistRecord;

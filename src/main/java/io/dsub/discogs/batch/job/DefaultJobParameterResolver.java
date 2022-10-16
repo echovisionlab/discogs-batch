@@ -18,7 +18,6 @@ public class DefaultJobParameterResolver implements JobParameterResolver {
 
   private static final String CHUNK_SIZE = ArgType.CHUNK_SIZE.getGlobalName();
   private static final String STRICT = ArgType.STRICT.getGlobalName();
-
   private final DumpDependencyResolver dumpDependencyResolver;
 
   @Override

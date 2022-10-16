@@ -1,6 +1,6 @@
-package io.dsub.discogs.batch.domain.artist;
+package io.dsub.discogs.batch.xml.artist;
 
-import io.dsub.discogs.batch.domain.SubItemXML;
+import io.dsub.discogs.batch.xml.SubItemXML;
 import io.dsub.discogs.jooq.tables.records.ArtistAliasRecord;
 import io.dsub.discogs.jooq.tables.records.ArtistGroupRecord;
 import io.dsub.discogs.jooq.tables.records.ArtistMemberRecord;

@@ -23,7 +23,6 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class DefaultDumpDependencyResolver implements DumpDependencyResolver {
-
   private static final String ETAG = ArgType.ETAG.getGlobalName();
   private static final String TYPE = ArgType.TYPE.getGlobalName();
   private static final String YEAR = ArgType.YEAR.getGlobalName();

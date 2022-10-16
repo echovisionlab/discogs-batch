@@ -8,7 +8,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 import io.dsub.discogs.batch.TestArguments;
-import io.dsub.discogs.batch.domain.artist.ArtistSubItemsXML;
+import io.dsub.discogs.batch.xml.artist.ArtistSubItemsXML;
 import io.dsub.discogs.batch.job.processor.ArtistSubItemsProcessor;
 import io.dsub.discogs.batch.job.registry.DefaultEntityIdRegistry;
 import java.io.ByteArrayOutputStream;

@@ -1,4 +1,4 @@
-package io.dsub.discogs.batch.domain.release;
+package io.dsub.discogs.batch.xml.release;
 
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;

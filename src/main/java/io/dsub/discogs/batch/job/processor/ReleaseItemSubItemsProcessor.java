@@ -1,6 +1,6 @@
 package io.dsub.discogs.batch.job.processor;
 
-import io.dsub.discogs.batch.domain.release.ReleaseItemSubItemsXML;
+import io.dsub.discogs.batch.xml.release.ReleaseItemSubItemsXML;
 import io.dsub.discogs.batch.job.registry.DefaultEntityIdRegistry;
 import io.dsub.discogs.batch.job.registry.EntityIdRegistry;
 import io.dsub.discogs.batch.util.ReflectionUtil;

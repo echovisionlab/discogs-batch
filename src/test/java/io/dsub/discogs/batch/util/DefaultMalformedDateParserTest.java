@@ -149,6 +149,8 @@ class DefaultMalformedDateParserTest {
     Assertions.assertDoesNotThrow(() -> parser.parse(malformedDate));
     LocalDate parsedDate = parser.parse(malformedDate);
 
+    System.out.println(parsedDate);
+
     // when
     if (parser.isYearValid(malformedDate)) {
 

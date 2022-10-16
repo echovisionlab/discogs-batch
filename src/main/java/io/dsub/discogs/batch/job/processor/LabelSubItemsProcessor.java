@@ -2,7 +2,7 @@ package io.dsub.discogs.batch.job.processor;
 
 import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.LABEL;
 
-import io.dsub.discogs.batch.domain.label.LabelSubItemsXML;
+import io.dsub.discogs.batch.xml.label.LabelSubItemsXML;
 import io.dsub.discogs.batch.job.registry.EntityIdRegistry;
 import io.dsub.discogs.batch.util.ReflectionUtil;
 import io.dsub.discogs.jooq.tables.records.LabelUrlRecord;

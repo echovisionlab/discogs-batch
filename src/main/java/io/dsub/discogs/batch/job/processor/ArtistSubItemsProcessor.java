@@ -2,7 +2,7 @@ package io.dsub.discogs.batch.job.processor;
 
 import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.ARTIST;
 
-import io.dsub.discogs.batch.domain.artist.ArtistSubItemsXML;
+import io.dsub.discogs.batch.xml.artist.ArtistSubItemsXML;
 import io.dsub.discogs.batch.job.registry.EntityIdRegistry;
 import io.dsub.discogs.batch.util.ReflectionUtil;
 import io.dsub.discogs.jooq.tables.records.ArtistAliasRecord;

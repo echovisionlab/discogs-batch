@@ -39,7 +39,7 @@ public class MapDiscogsDumpRepository implements DiscogsDumpRepository, Initiali
 
   @Override
   public int count() {
-    return (int) cache.stream().count();
+    return (int) cache.stream().count(); // DO NOT CALL count() from cache directly
   }
 
   @Override

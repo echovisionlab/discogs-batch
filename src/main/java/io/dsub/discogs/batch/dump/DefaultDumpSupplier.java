@@ -46,7 +46,6 @@ import org.xml.sax.SAXException;
 @Getter
 @Component
 public class DefaultDumpSupplier implements DumpSupplier {
-
   private static final Pattern XML_GZ_PATTERN =
       Pattern.compile("^[\\w/_-]+.xml.gz$", Pattern.CASE_INSENSITIVE);
   private static final Pattern ARTIST =
@@ -59,14 +58,11 @@ public class DefaultDumpSupplier implements DumpSupplier {
       Pattern.compile(".*labels.*", Pattern.CASE_INSENSITIVE);
   private static final Pattern BUCKET_VAR_DECLARATION_PATTERN =
       Pattern.compile(".*bucket_url.*", Pattern.CASE_INSENSITIVE);
-
   private static final String CONTENTS_TAG_NAME = "Contents";
   private static final String KEY = "Key";
   private static final String ETAG = "ETag";
   private static final String SIZE = "Size";
-
   private static final List<String> KNOWN_NODE_TYPES = List.of(KEY, ETAG, SIZE);
-
   private static final String DISCOGS_DATA_URL = "http://data.discogs.com/";
   private String lastKnownBucketUrl = "https://discogs-data.s3-us-west-2.amazonaws.com";
 
@@ -102,9 +98,9 @@ public class DefaultDumpSupplier implements DumpSupplier {
   }
 
   /**
-   * Parse bucket url presented in http://data.discogs.com. When called, this will fetch the html as
-   * a stream of strings, then parse accordingly. As of something may go wonky, this will retry 3
-   * times for parsing...
+   * Parse bucket url presented in <a href="http://data.discogs.com">discogs data page</a>.
+   * When called, this will fetch the html as a stream of strings, then parse accordingly.
+   * As of something may go wonky, this will retry 3 times for parsing...
    *
    * @return bucket url if success, else return null.
    */

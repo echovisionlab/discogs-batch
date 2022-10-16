@@ -1,0 +1,65 @@
+# Prepares, builds and publishes new releases
+name: Release
+
+# On changes to release branches
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🙌 Prepare release
+        id: release-please
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: simple
+          token: ${{ secrets.ACCESS_TOKEN }}
+          extra-files: "gradle.properties"
+          pull-request-title-pattern: "chore${scope}: release${component} v${version}"
+          package-name: io.dsub
+    outputs:
+      release_created: ${{ steps.release-please.outputs.release_created }}
+      tag_name: ${{ steps.release-please.outputs.tag_name }}
+
+  publish:
+    name: Publish
+
+    runs-on: ubuntu-latest
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+
+    steps:
+      - name: ✨ Checkout repository
+        uses: actions/checkout@v3
+
+      - name: ☕ Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: adopt
+
+      - name: 🐘 Set up Gradle
+        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+
+      - name: 📢 Publish new release
+        run: ./gradlew build
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: 📦 Upload artifacts
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ needs.release.outputs.tag_name }}
+          files: '**/build/libs/*'
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: 🚀 Publish new package
+        run: ./gradlew publish
+        env:
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

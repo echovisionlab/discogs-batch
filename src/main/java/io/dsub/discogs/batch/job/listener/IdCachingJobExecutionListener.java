@@ -25,9 +25,7 @@ public class IdCachingJobExecutionListener implements JobExecutionListener {
   protected static final String MASTER = "master";
   protected static final String RELEASE = "release";
   protected static final String STRICT = ArgType.STRICT.getGlobalName();
-
   private final EntityIdRegistry idRegistry;
-  private final DSLContext context;
 
   @Override
   public void beforeJob(JobExecution jobExecution) {

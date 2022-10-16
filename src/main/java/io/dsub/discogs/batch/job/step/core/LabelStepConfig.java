@@ -1,7 +1,7 @@
 package io.dsub.discogs.batch.job.step.core;
 
-import io.dsub.discogs.batch.domain.label.LabelSubItemsXML;
-import io.dsub.discogs.batch.domain.label.LabelXML;
+import io.dsub.discogs.batch.xml.label.LabelSubItemsXML;
+import io.dsub.discogs.batch.xml.label.LabelXML;
 import io.dsub.discogs.batch.dump.DiscogsDump;
 import io.dsub.discogs.batch.exception.DumpNotFoundException;
 import io.dsub.discogs.batch.exception.InvalidArgumentException;

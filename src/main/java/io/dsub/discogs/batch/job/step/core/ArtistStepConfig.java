@@ -1,7 +1,7 @@
 package io.dsub.discogs.batch.job.step.core;
 
-import io.dsub.discogs.batch.domain.artist.ArtistSubItemsXML;
-import io.dsub.discogs.batch.domain.artist.ArtistXML;
+import io.dsub.discogs.batch.xml.artist.ArtistSubItemsXML;
+import io.dsub.discogs.batch.xml.artist.ArtistXML;
 import io.dsub.discogs.batch.dump.DiscogsDump;
 import io.dsub.discogs.batch.exception.DumpNotFoundException;
 import io.dsub.discogs.batch.exception.InvalidArgumentException;

@@ -1,8 +1,8 @@
 package io.dsub.discogs.batch.job.step.core;
 
-import io.dsub.discogs.batch.domain.master.MasterMainReleaseXML;
-import io.dsub.discogs.batch.domain.release.ReleaseItemSubItemsXML;
-import io.dsub.discogs.batch.domain.release.ReleaseItemXML;
+import io.dsub.discogs.batch.xml.master.MasterMainReleaseXML;
+import io.dsub.discogs.batch.xml.release.ReleaseItemSubItemsXML;
+import io.dsub.discogs.batch.xml.release.ReleaseItemXML;
 import io.dsub.discogs.batch.dump.DiscogsDump;
 import io.dsub.discogs.batch.exception.DumpNotFoundException;
 import io.dsub.discogs.batch.exception.InvalidArgumentException;

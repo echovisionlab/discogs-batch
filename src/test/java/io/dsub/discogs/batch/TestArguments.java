@@ -1,13 +1,13 @@
 package io.dsub.discogs.batch;
 
-import io.dsub.discogs.batch.domain.artist.ArtistSubItemsXML;
-import io.dsub.discogs.batch.domain.artist.ArtistXML;
-import io.dsub.discogs.batch.domain.label.LabelSubItemsXML;
-import io.dsub.discogs.batch.domain.label.LabelXML;
-import io.dsub.discogs.batch.domain.master.MasterSubItemsXML;
-import io.dsub.discogs.batch.domain.master.MasterXML;
-import io.dsub.discogs.batch.domain.release.ReleaseItemSubItemsXML;
-import io.dsub.discogs.batch.domain.release.ReleaseItemXML;
+import io.dsub.discogs.batch.xml.artist.ArtistSubItemsXML;
+import io.dsub.discogs.batch.xml.artist.ArtistXML;
+import io.dsub.discogs.batch.xml.label.LabelSubItemsXML;
+import io.dsub.discogs.batch.xml.label.LabelXML;
+import io.dsub.discogs.batch.xml.master.MasterSubItemsXML;
+import io.dsub.discogs.batch.xml.master.MasterXML;
+import io.dsub.discogs.batch.xml.release.ReleaseItemSubItemsXML;
+import io.dsub.discogs.batch.xml.release.ReleaseItemXML;
 import io.dsub.discogs.batch.dump.DiscogsDump;
 import io.dsub.discogs.batch.dump.EntityType;
 import io.github.classgraph.ClassGraph;

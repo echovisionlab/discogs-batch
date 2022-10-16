@@ -19,18 +19,14 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackageClasses = {DiscogsBatchConfigurer.class})
 @RequiredArgsConstructor
 public class BatchConfig {
-
   public static final int DEFAULT_CHUNK_SIZE = 500;
-
   public static final String JOB_NAME = "discogs-batch-job" + LocalDateTime.now();
   private static final String FAILED = "FAILED";
   private static final String ANY = "*";
-
   private final Step artistStep;
   private final Step labelStep;
   private final Step masterStep;
   private final Step releaseStep;
-
   private final JobBuilderFactory jobBuilderFactory;
   private final IdCachingJobExecutionListener idCachingJobExecutionListener;
   private final ExitSignalJobExecutionListener exitSignalJobExecutionListener;

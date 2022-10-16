@@ -1,6 +1,5 @@
 package io.dsub.discogs.batch.job;
 
-import io.dsub.discogs.batch.argument.ArgType;
 import io.dsub.discogs.batch.dump.DiscogsDump;
 import io.dsub.discogs.batch.dump.EntityType;
 import io.dsub.discogs.batch.job.decider.MasterMainReleaseStepJobExecutionDecider;
@@ -14,14 +13,15 @@ import io.dsub.discogs.batch.job.tasklet.GenreStyleInsertionTasklet;
 import io.dsub.discogs.batch.job.writer.ItemWriterConfig;
 import io.dsub.discogs.batch.util.FileUtil;
 import io.dsub.discogs.batch.util.SimpleFileUtil;
-import java.util.HashMap;
-import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.env.Environment;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j
 @Configuration
@@ -36,11 +36,10 @@ import org.springframework.context.annotation.Import;
     })
 public class BatchInfrastructureConfig {
 
-  private ApplicationArguments args;
-
+  private Environment env;
   @Autowired
-  public void setArgs(ApplicationArguments args) {
-    this.args = args;
+  public void setArgs(Environment env) {
+    this.env = env;
   }
 
   @Bean
@@ -54,15 +53,14 @@ public class BatchInfrastructureConfig {
     return new MasterMainReleaseStepJobExecutionDecider(registry);
   }
 
-  // TODO: test!
   @Bean
   public FileUtil fileUtil() {
-    boolean keepFile = args.containsOption(ArgType.MOUNT.getGlobalName());
-    FileUtil fileUtil = SimpleFileUtil.builder().isTemporary(!keepFile).build();
-    if (keepFile) {
-      log.info("detected mount option. keeping file...");
+    boolean keep = getKeepFileValue();
+    FileUtil fileUtil = SimpleFileUtil.builder().isTemporary(!keep).build();
+    if (keep) {
+      log.info("found keep file environment value. keeping file...");
     } else {
-      log.info("mount option not set. files will be removed after the job.");
+      log.info("keep file environment value not set. all files will be removed after the job.");
     }
     return fileUtil;
   }
@@ -70,5 +68,9 @@ public class BatchInfrastructureConfig {
   @Bean
   public DiscogsDumpItemReaderBuilder discogsDumpItemReaderBuilder() {
     return new DiscogsDumpItemReaderBuilder(fileUtil());
+  }
+
+  private boolean getKeepFileValue() {
+    return env.getProperty("DISCOGS_BATCH_KEEP_FILE", Boolean.class, false);
   }
 }

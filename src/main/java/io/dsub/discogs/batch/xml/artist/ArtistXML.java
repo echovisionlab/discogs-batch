@@ -1,6 +1,6 @@
-package io.dsub.discogs.batch.domain.artist;
+package io.dsub.discogs.batch.xml.artist;
 
-import io.dsub.discogs.batch.domain.BaseXML;
+import io.dsub.discogs.batch.xml.BaseXML;
 import io.dsub.discogs.jooq.tables.records.ArtistRecord;
 import java.time.Clock;
 import java.time.LocalDateTime;

@@ -7,10 +7,10 @@ import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.MASTER;
 import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.RELEASE;
 import static io.dsub.discogs.batch.job.registry.EntityIdRegistry.Type.STYLE;
 
-import io.dsub.discogs.batch.domain.artist.ArtistXML;
-import io.dsub.discogs.batch.domain.label.LabelXML;
-import io.dsub.discogs.batch.domain.master.MasterXML;
-import io.dsub.discogs.batch.domain.release.ReleaseItemXML;
+import io.dsub.discogs.batch.xml.artist.ArtistXML;
+import io.dsub.discogs.batch.xml.label.LabelXML;
+import io.dsub.discogs.batch.xml.master.MasterXML;
+import io.dsub.discogs.batch.xml.release.ReleaseItemXML;
 import io.dsub.discogs.batch.job.registry.DefaultEntityIdRegistry;
 import io.dsub.discogs.batch.job.registry.EntityIdRegistry;
 import java.util.List;
