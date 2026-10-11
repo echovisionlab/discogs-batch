@@ -1,5 +1,9 @@
 # CI and contributions
 
+This Java repository is archived and GitHub Actions is disabled. The checks
+and release procedures below describe its previous workflow. Submit importer
+changes to [Go OpenDiscogs Batch](https://github.com/dsub-io/go-open-discogs-batch).
+
 The Go migration notice workflow updates the repository's description and
 website and prepends a migration link to published Java release notes. It runs
 when its configuration changes on `main`, when a release is published, or
