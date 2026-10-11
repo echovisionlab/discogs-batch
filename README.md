@@ -1,7 +1,9 @@
-# Java OpenDiscogs Batch (deprecated)
+# Java OpenDiscogs Batch (archived)
 
 Use [Go OpenDiscogs Batch](https://github.com/dsub-io/go-open-discogs-batch).
-This Java implementation is deprecated.
+This Java implementation is deprecated and the repository is archived.
+Java releases remain available for existing deployments. Development and
+dependency updates continue in the Go repository.
 
 - [Run the Go importer](https://github.com/dsub-io/go-open-discogs-batch#quick-start)
 - [Go Batch releases](https://github.com/dsub-io/go-open-discogs-batch/releases)
@@ -169,7 +171,11 @@ Mount writable storage only when downloads must survive container replacement.
 Versioned executable JARs are attached to GitHub Releases. Build a local image
 with `./gradlew bootBuildImage`.
 
-## Development
+## Historical development
+
+These commands describe the archived Java build. For current development and
+dependency updates, use
+[Go OpenDiscogs Batch](https://github.com/dsub-io/go-open-discogs-batch).
 
 Source builds require JDK 21; `.sdkmanrc` selects Temurin 21.0.11. Integration
 tests label every owned Docker resource with a per-run identity and use tmpfs

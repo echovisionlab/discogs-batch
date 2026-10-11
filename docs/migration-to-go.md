@@ -1,6 +1,6 @@
 # Migrating from the Java importer to Go
 
-The Java importer is deprecated. Use
+The Java importer is deprecated and its repository is archived. Use
 [Go OpenDiscogs Batch](https://github.com/dsub-io/go-open-discogs-batch) for imports
 and [Go OpenDiscogs API](https://github.com/dsub-io/go-open-discogs-api) to serve
 the imported data.
